@@ -1,2 +1,2 @@
 #!/bin/bash
-{ ls -a1p | grep -E '^[\.0-9A-Za-z]' | sort -f | awk '/^\.$/ || /^\.\.$/ {print; next} {print}' | tr '\n' ',' | sed 's/,$/\n/'; } | sed 's/,/,\n/g'
+ls -amvp
