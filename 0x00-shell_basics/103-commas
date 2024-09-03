@@ -1,0 +1,2 @@
+#!/bin/bash
+(ls -a1p | grep -E '^(\.|[0-9A-Za-z])' | sort -f | awk '/^\.$/ || /^\.\.$/ {print $0; next} {print}' | paste -sd ',' -) && echo`
